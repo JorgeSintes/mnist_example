@@ -1,6 +1,6 @@
 from data_load import data_load
 from train_test_model import train_test_model
-from models import LNet, CLNet, CPLNet
+from models import LNet, CLNet, CPLNet, CNN
 import torch
 import numpy as np
 
@@ -11,7 +11,7 @@ def main():
     batch_size = 100
     num_epochs = 50
 
-    model = CPLNet()
+    model = CNN()
     criterion = torch.nn.CrossEntropyLoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
